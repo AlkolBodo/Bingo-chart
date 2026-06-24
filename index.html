@@ -4,70 +4,45 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Bingo Chart</title>
-    <link rel="stylesheet" href="/bingo-chart/style.css">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <div class="container">
         <h1>Bingo Chart</h1>
-        
-        <div class="controls">
-            <button id="clearBtn" class="clear-btn">Clear All</button>
-            <button id="resetBtn" class="reset-btn">Reset Marks</button>
-        </div>
-        
-        <div class="bingo-grid">
-            <div class="bingo-tile">
-                <input type="text" class="tile-input" placeholder="Enter text...">
-                <div class="tile-content"></div>
-                <div class="tile-mark"></div>
+
+        <!-- Input Form Section -->
+        <div id="inputSection">
+            <p class="subtitle">Fill in your 9 bingo tiles below, then generate your chart!</p>
+            <div class="input-grid">
+                <input type="text" class="bingo-input" placeholder="Tile 1">
+                <input type="text" class="bingo-input" placeholder="Tile 2">
+                <input type="text" class="bingo-input" placeholder="Tile 3">
+                <input type="text" class="bingo-input" placeholder="Tile 4">
+                <input type="text" class="bingo-input" placeholder="Tile 5">
+                <input type="text" class="bingo-input" placeholder="Tile 6">
+                <input type="text" class="bingo-input" placeholder="Tile 7">
+                <input type="text" class="bingo-input" placeholder="Tile 8">
+                <input type="text" class="bingo-input" placeholder="Tile 9">
             </div>
-            <div class="bingo-tile">
-                <input type="text" class="tile-input" placeholder="Enter text...">
-                <div class="tile-content"></div>
-                <div class="tile-mark"></div>
-            </div>
-            <div class="bingo-tile">
-                <input type="text" class="tile-input" placeholder="Enter text...">
-                <div class="tile-content"></div>
-                <div class="tile-mark"></div>
-            </div>
-            <div class="bingo-tile">
-                <input type="text" class="tile-input" placeholder="Enter text...">
-                <div class="tile-content"></div>
-                <div class="tile-mark"></div>
-            </div>
-            <div class="bingo-tile">
-                <input type="text" class="tile-input" placeholder="Enter text...">
-                <div class="tile-content"></div>
-                <div class="tile-mark"></div>
-            </div>
-            <div class="bingo-tile">
-                <input type="text" class="tile-input" placeholder="Enter text...">
-                <div class="tile-content"></div>
-                <div class="tile-mark"></div>
-            </div>
-            <div class="bingo-tile">
-                <input type="text" class="tile-input" placeholder="Enter text...">
-                <div class="tile-content"></div>
-                <div class="tile-mark"></div>
-            </div>
-            <div class="bingo-tile">
-                <input type="text" class="tile-input" placeholder="Enter text...">
-                <div class="tile-content"></div>
-                <div class="tile-mark"></div>
-            </div>
-            <div class="bingo-tile">
-                <input type="text" class="tile-input" placeholder="Enter text...">
-                <div class="tile-content"></div>
-                <div class="tile-mark"></div>
+            <div class="generate-controls">
+                <button id="generateBtn" class="generate-btn">Generate Bingo Chart</button>
             </div>
         </div>
-        
-        <div class="footer">
-            Click tiles to mark them. Edit text directly in the tiles.
+
+        <!-- Bingo Grid Section (hidden until generated) -->
+        <div id="chartSection" class="hidden">
+            <div class="controls">
+                <button id="editBtn" class="edit-btn">Edit Tiles</button>
+                <button id="resetBtn" class="reset-btn">Reset Marks</button>
+                <button id="clearBtn" class="clear-btn">Clear All</button>
+            </div>
+            <div class="bingo-grid" id="bingoGrid"></div>
+            <div class="footer">
+                Click tiles to mark them as complete!
+            </div>
         </div>
     </div>
-    
-    <script src="/bingo-chart/script.js"></script>
+
+    <script src="script.js"></script>
 </body>
 </html>
